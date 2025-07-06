@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare - AI Chăm Sóc Sức Khỏe Tâm Thần</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #8ECAE6;
+            --secondary: #219EBC;
+            --accent: #FFB703;
+            --light: #FB8500;
+            --dark: #023047;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdfa 100%);
+        }
+        
+        .breathing-animation {
+            animation: breathe 6s infinite ease-in-out;
+        }
+        
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .mood-option:hover {
+            transform: translateY(-5px);
+            transition: transform 0.2s ease;
+        }
+        
+        .chat-bubble {
+            border-radius: 1.5rem;
+            max-width: 80%;
+        }
+        
+        .user-bubble {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .ai-bubble {
+            background-color: #e2e8f0;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg py-6 shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50" alt="Logo MindCare - Biểu tượng trái tim và sóng não màu xanh ngọc" class="w-10 h-10 rounded-full" />
+                <h1 class="text-2xl font-bold text-[var(--dark)]">MindCare</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#features" class="text-[var(--dark)] hover:text-[var(--light)] transition">Tính Năng</a>
+                <a href="#resources" class="text-[var(--dark)] hover:text-[var(--light)] transition">Tài Nguyên</a>
+                <a href="#about" class="text-[var(--dark)] hover:text-[var(--light)] transition">Về Chúng Tôi</a>
+            </nav>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold text-[var(--dark)] mb-6">Đồng Hành Cùng Sức Khỏe Tâm Thần Của Bạn</h2>
+                <p class="text-xl text-gray-600 mb-8">MindCare sử dụng AI để hỗ trợ bạn trong hành trình chăm sóc sức khỏe tâm thần mỗi ngày.</p>
+                <button class="bg-[var(--accent)] hover:bg-[var(--light)] text-white px-6 py-3 rounded-full font-semibold shadow-lg transition transform hover:scale-105">
+                    Bắt Đầu Ngay
+                </button>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://placehold.co/600x400" alt="Thiết kế giao diện ứng dụng di động MindCare với giao diện thân thiện và các chỉ số sức khỏe tâm thần" class="rounded-2xl shadow-xl max-w-full h-auto" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-[var(--dark)] mb-16">Giải Pháp AI của Chúng Tôi</h2>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-[#f0f9ff] p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">AI Chatbot Tâm Lý</h3>
+                    <p class="text-gray-600 text-center">Trò chuyện với chatbot thông minh để được lắng nghe và nhận lời khuyên phù hợp.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-[#f0f9ff] p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Theo Dõi Cảm Xúc</h3>
+                    <p class="text-gray-600 text-center">Ghi lại và phân tích tâm trạng hàng ngày giúp bạn hiểu rõ hơn về bản thân.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-[#f0f9ff] p-8 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Bài Tập Thiền</h3>
+                    <p class="text-gray-600 text-center">Các bài tập ngắn giúp giảm căng thẳng và cải thiện tập trung mỗi ngày.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mood Tracker -->
+    <section class="py-20 bg-[#f0fdfa]">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-[var(--dark)] mb-16">Theo Dõi Tâm Trạng Hôm Nay</h2>
+            
+            <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-sm">
+                <p class="text-center mb-6">Hôm nay bạn cảm thấy thế nào?</p>
+                
+                <div class="grid grid-cols-5 gap-4 mb-8">
+                    <button class="mood-option flex flex-col items-center p-2 rounded-full hover:bg-[var(--primary)] hover:bg-opacity-20">
+                        <div
